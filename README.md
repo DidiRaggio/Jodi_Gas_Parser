@@ -7,11 +7,13 @@
 ## Dependencies:
 	os
 	zipfile
-	pandas
-	tqdm
 	requests
 	csv
 	json
+
+	(optional libraries, for better parsing performance and batch downloading)
+	pandas
+	tqdm
 
 ## Usage:
 	0) Open terminal and cd to working directory.
@@ -22,6 +24,12 @@
 		1) run terminal command:
 			$ juptyer notebook
 		2) execute each cell with "crl + enter"
+
+## Options:
+	You can modify the options in parser.py lines #204 to line #206. These options just need to be uncommented and they consist of:
+	output_file = True
+	standard_libraries = True
+	time_period_timestamp = True
 
 ## Notes:
 	1) The 'TOTDEMC', 'TOTIMPSB', 'TOTDEMO', 'MAINTOT', 'TOTEXPSB', 'CLOSTLV', 'CONVER', 'OSOURCES' codes for the FLOW_BREAKDOWNS where not found in the manual.

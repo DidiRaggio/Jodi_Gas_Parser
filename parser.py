@@ -2,7 +2,6 @@ import os
 import zipfile
 import requests
 import json
-import sys
 
 try:
 	import pandas as pd
