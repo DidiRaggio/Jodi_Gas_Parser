@@ -2,13 +2,12 @@ import os
 import zipfile
 import requests
 import json
-
+import csv
 try:
 	import pandas as pd
 	from tqdm import tqdm
 	standard_libraries = False
 except ImportError:
-	import csv
 	standard_libraries = True
 
 try:
@@ -178,7 +177,8 @@ def parse_csv(csv_reader):
 	if output_file:
 		with open("data.json", "w") as outfile:
 			json.dump(json_array, outfile)
-		return json_array
+	
+	return json_array
 
 def print_json(json_array):
 	for json_series in json_array:
